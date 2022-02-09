@@ -23,7 +23,7 @@
         }
         Execução: npx lint-staged
 
-    Terceiro: npm i husky@latest -D
+    Terceiro: npm i husky@4.3 -D
         descrição: permite adicionar hooks no git. Rodar um script antes que acontece um script.
         Vai fazer com que o commit fique travado conforme a configuração do lint-staged.
         husky: {
