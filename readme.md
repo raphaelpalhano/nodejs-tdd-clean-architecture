@@ -31,5 +31,14 @@
                 pre-commit: "lint-staged"
             }
         }
-         
+    
+    Quarto: npm i jest -D
+        descrição: framework para testes unitários, integração, etc.
+        config: 
+         windows: |
+            npm install -g jest;
+            Set-ExecutionPolicy RemoteSigned
+            jest --init
+        
+
 ~~~
