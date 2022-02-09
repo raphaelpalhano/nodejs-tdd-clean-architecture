@@ -14,17 +14,22 @@
         Rodar arquivos somente que estão na área de staged.
         É possível fazer validação de arquivos que vão entrar no commit.
         Toda vez que fizer um git add . eles vão para o staged, e nisso 
-        é possível aplicar validações
+        é possível aplicar validações. 
+        fix == o standard vai tentar corrigir e logo em seguida fazer um commit.
         config: {
-            lint-staged:{
-                "*.js": ["standard"]
-            }
+            "lint-staged":{
+                "*.js": ["standard --fix", "git add"]
+            },
         }
         Execução: npx lint-staged
-    Terceiro: npm i husky@next -D
+
+    Terceiro: npm i husky@latest -D
         descrição: permite adicionar hooks no git. Rodar um script antes que acontece um script.
         Vai fazer com que o commit fique travado conforme a configuração do lint-staged.
-         hooks: {
-            pre-commit: "lint-staged"
+        husky: {
+            hooks: {
+                pre-commit: "lint-staged"
+            }
         }
+         
 ~~~
