@@ -1,3 +1,3 @@
-function testV(){
-    return "";
+function testV () {
+  return '';
 }
