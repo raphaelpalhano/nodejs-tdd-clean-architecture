@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "prepare": "husky install"
+    "test": "jest --watchAll",
+    "test:staged": "jest"
+  },
+  "standard": {
+    "env": ["jest"]
   },
   "keywords": [],
   "author": "",
